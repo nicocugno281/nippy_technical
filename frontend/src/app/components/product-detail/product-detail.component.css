@@ -1,0 +1,62 @@
+
+
+/* Contenedor principal del detalle del producto */
+.product-detail-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del título */
+.product-detail-container h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Descripción del producto */
+.product-detail-container p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: center;
+    max-width: 600px;
+}
+
+/* Información de stock */
+.product-detail-container .stock-info {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Estilo para los botones */
+.product-detail-container button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.product-detail-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para el mensaje de error */
+.error-message {
+    color: #d9534f;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 20px;
+}
