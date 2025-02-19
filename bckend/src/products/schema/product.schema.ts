@@ -10,19 +10,18 @@ export type ProductDocument = Product & Document;
 })
 export class Product {
 
-    @Prop({ required: true }) // `name` es obligatorio
-    name: string;
+    @Prop({ required: true }) 
 
-    @Prop() // `description` es opcional
+    @Prop() 
     description: string;
 
-    @Prop({ required: true }) // `price` es obligatorio
+    @Prop({ required: true }) 
     price: number;
 
     @Prop({ type: [String], index: true }) // Solución: Añadir índice en `categories`
     categories: string[];
 
-    @Prop({ required: true }) // `stock` es obligatorio
+    @Prop({ required: true }) 
     stock: number;
 }
 

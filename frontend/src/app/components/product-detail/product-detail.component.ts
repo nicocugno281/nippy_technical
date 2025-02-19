@@ -10,7 +10,7 @@ import { Product } from '../../shared/models/product.model';
 })
 export class ProductDetailComponent implements OnInit {
   product: Product | null = null;  // Inicializa como null en caso de que no se encuentre el producto
-  errorMessage: string = '';  // Mensaje de error
+  errorMessage: string = ''; 
 
   constructor(
     private route: ActivatedRoute,  // Para acceder al parámetro 'id' de la URL

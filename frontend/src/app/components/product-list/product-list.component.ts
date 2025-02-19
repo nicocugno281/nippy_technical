@@ -38,7 +38,7 @@ import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators';
 export class ProductListComponent implements OnInit, OnDestroy {
   products: Product[] = [];
   searchTerm: string = '';
-  category: string = '';  // Campo para la categoría
+  category: string = '';  
   currentPage: number = 1;
   totalItems: number = 0;
   itemsPerPage: number = 10;
@@ -66,7 +66,7 @@ export class ProductListComponent implements OnInit, OnDestroy {
       distinctUntilChanged(), // Evita hacer la búsqueda si el valor no cambia
       switchMap(searchTerm => {
         // Si no hay término de búsqueda, carga todos los productos
-        if (!searchTerm.trim()) {
+        if (! searchTerm.trim()) {
           return this.productService.getAllProducts(this.currentPage, this.itemsPerPage);
         }
         // Si hay término de búsqueda, busca los productos que coincidan
@@ -74,8 +74,8 @@ export class ProductListComponent implements OnInit, OnDestroy {
       })
     ).subscribe(response => {
       this.products = response.products;  // Acceder a los productos
-      this.totalItems = response.totalCount; // Total de productos
-      this.totalPages = Math.ceil(this.totalItems / this.itemsPerPage); // Calcular las páginas
+      this.totalItems = response.totalCount; 
+      this.totalPages = Math.ceil(this.totalItems / this.itemsPerPage); 
     });
   }
 
@@ -97,8 +97,8 @@ export class ProductListComponent implements OnInit, OnDestroy {
   loadProducts() {
     this.productService.getAllProducts(this.currentPage, this.itemsPerPage).subscribe(response => {
       this.products = response.products;  // Acceder a los productos
-      this.totalItems = response.totalCount; // Total de productos
-      this.totalPages = Math.ceil(this.totalItems / this.itemsPerPage); // Calcular las páginas
+      this.totalItems = response.totalCount; 
+      this.totalPages = Math.ceil(this.totalItems / this.itemsPerPage);
     });
   }
 

@@ -57,11 +57,11 @@ export class ProductsService {
         }
     }
 
-    /*async findByCategory(category: string): Promise<Product[]> {
+    async findByCategory(category: string): Promise<Product[]> {
         return this.productModel.find({
             categories: { $in: [category] }  // Usa $in para verificar si la categoría está en el array
         }).exec();
-    }*/
+    }
 
 
     async create(productData: Partial<Product>): Promise<ProductDocument> {
